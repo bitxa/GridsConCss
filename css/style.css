@@ -1,0 +1,55 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background: rgba(215, 211, 211, 0.3);
+	font-family: 'Poppins', sans-serif;
+}
+.contenedor{
+	width: 95%;
+	max-width: 1124px;
+	margin: 0 auto;
+
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(6, auto);
+
+	grid-template-areas: "header  header"
+						 "slider slider"
+						 "adopta1 adopta2"
+						 "doctor doctor"	
+						 "sponsor sponsor"
+						 "footer footer";	
+}
+
+.contenedor .cabeceraPrincipal{
+	grid-area: header;
+	background-color: #ccc;
+}
+
+.contenedor .sliderPrincipal{
+	grid-area: slider;
+	background-color: #333;
+}
+.contenedor .adopcion1{
+	grid-area: adopta1;
+	background-color: #666;
+}
+.contenedor .adopcion2{
+	grid-area: adopta2;
+	background-color: #333;
+}
+.contenedor .doctor{
+	grid-area: doctor;
+	background-color: #333;
+}
+.contenedor .sponsor{
+	grid-area: sponsor;
+	background-color: #333;
+}
+.contenedor .piePagina{
+	grid-area: footer;
+	background-color: #ff0000;
+}
