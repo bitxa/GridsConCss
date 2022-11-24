@@ -18,28 +18,86 @@ body{
 
 	grid-template-areas: "header  header"
 						 "slider slider"
+						 "title1 title1"
 						 "adopta1 adopta2"
-						 "doctor doctor"	
+						 "doctors doctors"
+						 "title2 title2"	
 						 "sponsor sponsor"
 						 "footer footer";	
 }
 
 .contenedor .cabeceraPrincipal{
 	grid-area: header;
-	background-color: #ccc;
+	background-color:#FDCF13;
+	display: flex;
+	justify-content: space-between;
 }
 
+nav a {
+	text-decoration: none;
+	padding: 2vh;
+	font-size: 2vh;
+	
+}
+
+nav a:hover{
+	background-color:#cfccbc;
+	color: #666;
+} 
+
+.contenedor .menuPrincipal{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.contenedor .cabeceraPrincipal .logotipo{
+	padding: 1vh;
+}
 .contenedor .sliderPrincipal{
 	grid-area: slider;
-	background-color: #333;
+	background-position: center;
+	background-size: cover;
+    background-repeat: no-repeat;
+	height: 70Vh;
+	background-image: url(https://img.freepik.com/free-vector/cute-pets-illustration_53876-112522.jpg?w=2000);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 20vh;
 }
+
+.contenedor .sliderPrincipal p{
+	font-size: 2.5vw;
+    color: #333;
+}
+
+.contenedor .sliderPrincipal button{
+	background-color: #04AA6D;
+	border: none;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	border-radius: 12px;
+}
+
+.contenedor .sliderPrincipal .sliderInfo{
+	display: flex;
+	flex-direction: column;
+    justify-content: space-between;
+	align-items: center;
+}
+
 .contenedor .adopcion1{
 	grid-area: adopta1;
-	background-color: #666;
+
 }
 .contenedor .adopcion2{
 	grid-area: adopta2;
-	background-color: #333;
+
 }
 .contenedor .doctor{
 	grid-area: doctor;
@@ -51,5 +109,214 @@ body{
 }
 .contenedor .piePagina{
 	grid-area: footer;
-	background-color: #ff0000;
+	background-color: #41BDEA;
+	display: flex;
+	justify-content: space-around;
+    align-items: center;
+}
+
+.contenedor .title{
+	display: flex;
+	justify-self: center;
+	align-items: center;
+	color: #9c9898;
+	font-weight: lighter;
+	font-size: 1.4vh;
+	margin: 2vh;
+}
+
+.piePagina .redesSociales{
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;	
+}
+
+.piePagina .redesSociales a{
+	text-decoration: none;
+	color: #fff;
+    font-size: 1.5vh;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+
+.piePagina .redesSociales a i{
+	padding: 2vh;
+	font-size: x-large;
+}
+
+.contenedor .noticia img{
+	display: flex;
+	height: 30vh;
+}
+
+.contenedor .noticia {
+	display: flex;
+    justify-content: center;
+}
+
+.contenedor .noticia .info{
+	display: flex;
+	flex-direction: column;
+	font-size: 1.5vh;
+	margin: 2vh;
+}
+
+.contenedor .noticia .info h3{
+	font-size: 1.5vh;
+}
+
+.contenedor .noticia .info button{
+	background-color: #04AA6D;
+	border: none;
+	color: white;
+	padding: 2vh;
+	text-align: center;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+    justify-content: center;
+	align-self: flex-end;
+	justify-self: flex-end;
+	border-radius: 2vh;
+	width: 9vh;
+	height: 4vh;
+}
+
+.title1{
+	grid-area: title1;
+}
+
+
+.title2{
+	grid-area: title2;
+}
+
+.doctors{
+	grid-area: doctors;
+	display: flex;
+	flex-direction: row;
+	height: 40vh;
+}
+
+.doctor {
+	width: 30vh;
+	margin: 1vh;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.doctor .docinfo{
+	padding: 2vh;
+	position: absolute;
+	align-self: flex-end;
+	justify-self: end;
+	top: 58%;
+	background-color: white;
+	opacity: 0.7;
+	color: #000000;
+
+}
+
+
+
+
+
+.doctor img{
+	width: 100%;
+	height: 100%;
+}
+
+
+/* ----------------------------------Formulario------------------------------ */
+
+.formulario {
+    grid-area: formulario;
+	display: flex;
+    flex-direction: column;
+	padding: 1em;
+    border-radius: 5px;
+	border: 1px solid #ccc;
+	background-color: #f5f5f5;
+	width: 100%;
+    height: 100%;
+	box-shadow: 0px 0px 10px 0px;
+
+}
+
+main{
+	grid-area: slider;
+	margin: 0 auto;
+	width: 90%;
+	padding: 2em 0;
+	margin-bottom: 5vh;
+}
+
+main h2 {
+	color: #9c9898;
+	font-size: 1.5em;
+    font-weight: bold;
+}
+
+main label {
+	color: #9c9898;
+    font-size: 1em;
+	line-height: 4vh;
+}
+
+.groupInput {
+	padding: 1vh;
+
+}
+
+.groupInput label {
+    display: block;
+}
+
+.groupInput input[type = text], .groupInput input[type = number], .grupoInput input[type = email ], .groupInput input[type = date], .groupInput input[type = text]{
+	width: 90%;
+	padding: 2vh;
+	border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+main .button {
+	background-color:#2f3831;
+	border-radius:28px;
+	border:1px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #000000;
+	width: 30%;
+	align-self: flex-end;
+	justify-self: flex-end;
+	margin-top: 5vh;
+	margin-bottom: -5vh;
+}
+
+main .button:hover {
+	background-color:#000000;
+}
+
+main .button:active {
+	position:relative;
+	top:1px;
+}
+
+main .column{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+main .column .card{
+	width: 25%;
+	box-sizing: border-box;
 }
